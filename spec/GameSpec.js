@@ -13,4 +13,12 @@ describe("Game", function() {
     expect(game.go('rock','paper')).toEqual(2);
   });
 
+  it("P1 Scissors should beat P2 Paper", function() {
+    expect(game.go('scissors','paper')).toEqual(1);
+  });
+
+  it("P2 Scissors should beath P1 Paper", function() {
+    expect(game.go('paper','scissors')).toEqual(2);
+  });
+
  });
