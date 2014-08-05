@@ -35,4 +35,10 @@ describe("Game", function() {
     expect(game.go('paper','paper')).toEqual(0);
   });
 
+  it("Unrecognized guesses should return false", function() {
+    expect(game.go('scissors','xxx')).toEqual(false);
+    expect(game.go('xxx','scissors')).toEqual(false);
+    expect(game.go('xxx','xxx')).toEqual(false);
+  });
+
  });
