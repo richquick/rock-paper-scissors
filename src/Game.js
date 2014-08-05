@@ -2,5 +2,5 @@ function Game() {
 }
 
 Game.prototype.go = function(player1sGo,player2sGo) {
-  // return ('rock');
+  return (1);
 };
