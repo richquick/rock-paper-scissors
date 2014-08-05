@@ -29,4 +29,10 @@ describe("Game", function() {
     expect(game.go('scissors','rock')).toEqual(2);
   });
 
+  it("If P1 matches P2 it should be a draw", function() {
+    expect(game.go('scissors','scissors')).toEqual(0);
+    expect(game.go('rock','rock')).toEqual(0);
+    expect(game.go('paper','paper')).toEqual(0);
+  });
+
  });
