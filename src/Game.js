@@ -3,7 +3,8 @@ function Game() {
 
 Game.prototype.go = function(player1sGo,player2sGo) {
 	var winningMoves = {
-		'paper' : 'rock'
+		'paper' : 'rock',
+		'scissors': 'paper'
 	}
 
 	if (winningMoves[player1sGo] == player2sGo) {
