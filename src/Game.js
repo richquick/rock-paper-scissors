@@ -2,5 +2,13 @@ function Game() {
 }
 
 Game.prototype.go = function(player1sGo,player2sGo) {
-  return (1);
+	var winningMoves = {
+		'paper' : 'rock'
+	}
+
+	if (winningMoves[player1sGo] == player2sGo) {
+		return (1);
+	} else if (winningMoves[player2sGo] == player1sGo) {
+		return (2);
+	}
 };
