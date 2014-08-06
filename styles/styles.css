@@ -1,24 +1,125 @@
 body {
-	background: #ff0;
+	font-family: Helvetica, Arial, "Sans-Serif";
+	background: #f2ffae url(../images/background.png);
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 0;
+	position: absolute;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 20px 0;
+	width: 22%;
+	color: #666;
+	font-style: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav a {
+	display: block;
+	width: 100%;
+	padding: 60px 0 0 0;
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-indent: -9000px;
+	overflow: hidden;
+	opacity: 0.6;
+	-moz-transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+}
+
+nav a:hover {
+	opacity: 1;
+}
+
+nav a#rock {
+	background-image: url(../images/nav-rock.png);
+}
+
+nav a#paper {
+	background-image: url(../images/nav-paper.png);
+}
+
+nav a#scissors {
+	background-image: url(../images/nav-scissors.png);
+}
+
+nav a#computer {
+	background-image: url(../images/nav-computer.png);
+}
+
+nav li span {
+	display: none;
 }
 
 #myGuess,
-#computersGuess,
+#computersGuess {
+	background-position: -200px bottom;
+	height: 121px;
+	background-repeat: no-repeat;
+	text-indent: -9000px;
+	overflow: hidden;
+	width: 49%;
+	-moz-transition: background-position 1s ease;
+	-webkit-transition: background-position 1s ease;
+	transition: background-position 1s ease;
+}
+
+#myGuess {
+	float: left;
+}
+
+#computersGuess {
+	float: right;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
 #result {
+	float: left;
 	outline: 1px dotted #c00;
 	height: 100px;
+	width: 100%;
+}
+
+#myGuess.rock, #computersGuess.rock,
+#myGuess.paper, #computersGuess.paper,
+#myGuess.scissors, #computersGuess.scissors {
+	background-position: -115px bottom;
 }
 
 .rock {
-	background: #eee;
+	background-image: url(../images/rock.png);
 }
 
 .paper {
-	background: #cff;
+	background-image: url(../images/paper.png);
 }
 
 .scissors {
-	background: #ffc;
+	background-image: url(../images/scissors.png);
 }
 
 .draw {
@@ -31,4 +132,22 @@ body {
 
 .win2 {
 	border: 1px solid blue;
+}
+
+@media only screen and (min-width:450px){
+
+#myGuess.rock, #computersGuess.rock,
+#myGuess.paper, #computersGuess.paper,
+#myGuess.scissors, #computersGuess.scissors {
+	background-position: -100px bottom;
+}
+
+}
+
+@media only screen and (min-width:740px){
+
+nav li span {
+	display: inline;
+}
+
 }

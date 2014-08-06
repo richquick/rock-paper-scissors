@@ -28,12 +28,19 @@ Game.prototype.displayChoices = function(player1sGo,player2sGo) {
 	var player1sGoHolder = document.getElementById("myGuess");
 	if (player1sGoHolder != null) {
 		player1sGoHolder.innerHTML = player1sGo;
-		player1sGoHolder.className = player1sGo;
+		player1sGoHolder.className = "";
+		setTimeout(function(){
+			player1sGoHolder.className = player1sGo;
+		},1000);
 	}
 	var player2sGoHolder = document.getElementById("computersGuess");
 	if (player2sGoHolder != null) {
 		player2sGoHolder.innerHTML = player2sGo;
-		player2sGoHolder.className = player2sGo;
+		player2sGoHolder.className = "";
+		setTimeout(function(){
+			player2sGoHolder.className = player2sGo;
+		},1000);
+		
 	}
 };
 
