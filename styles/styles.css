@@ -1,0 +1,34 @@
+body {
+	background: #ff0;
+}
+
+#myGuess,
+#computersGuess,
+#result {
+	outline: 1px dotted #c00;
+	height: 100px;
+}
+
+.rock {
+	background: #eee;
+}
+
+.paper {
+	background: #cff;
+}
+
+.scissors {
+	background: #ffc;
+}
+
+.draw {
+	border: 1px solid red;
+}
+
+.win1 {
+	border: 1px solid green;
+}
+
+.win2 {
+	border: 1px solid blue;
+}
