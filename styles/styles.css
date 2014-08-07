@@ -112,7 +112,7 @@ section.guesses:after {
 #myGuess.rock, #computersGuess.rock,
 #myGuess.paper, #computersGuess.paper,
 #myGuess.scissors, #computersGuess.scissors {
-	background-position: -145px bottom;
+	background-position: -150px bottom;
 }
 
 .rock {
