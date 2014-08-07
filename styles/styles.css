@@ -7,7 +7,7 @@ body {
 h1 {
 	text-indent: -9000px;
 	overflow: hidden;
-	height: 40px;
+	height: 30px;
 	background: url(../images/logo.png) no-repeat center;
 	background-size: 100%;
 }
@@ -21,7 +21,7 @@ h2 {
 
 nav ul {
 	list-style: none;
-	margin: 0 0 0 20px;
+	margin: -10px 0 0 20px;
 	padding: 0;
 }
 
@@ -39,7 +39,7 @@ nav ul li {
 nav a {
 	display: block;
 	width: 100%;
-	padding: 60px 0 0 0;
+	padding: 55px 0 0 0;
 	background-repeat: no-repeat;
 	background-position: center top;
 	text-indent: -9000px;
@@ -112,7 +112,7 @@ section.guesses:after {
 #myGuess.rock, #computersGuess.rock,
 #myGuess.paper, #computersGuess.paper,
 #myGuess.scissors, #computersGuess.scissors {
-	background-position: -115px bottom;
+	background-position: -145px bottom;
 }
 
 .rock {
@@ -129,7 +129,7 @@ section.guesses:after {
 
 #result {
 	width: 80%;
-	margin: 40px auto 0 auto;
+	margin: 20px auto 0 auto;
 	padding: 30px;
 	text-align: center;
 	font-size: 150%;
@@ -153,10 +153,25 @@ section.guesses:after {
 @media only screen and (min-width:410px){
 
 h1 {
+	height: 40px;
 	background-size: auto;
 }
 
+nav ul {
+	margin: 0 0 0 20px;
 }
+
+nav a {
+	padding: 60px 0 0 0;
+}
+
+#result {
+	width: 80%;
+	margin: 40px auto 0 auto;
+}
+
+}
+
 @media only screen and (min-width:450px){
 
 #myGuess.rock, #computersGuess.rock,
