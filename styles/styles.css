@@ -136,10 +136,6 @@ section.guesses:after {
 	background: rgba(255,255,255,0.4);
 	border: 5px solid rgba(255,255,255,0.7);
 	opacity: 0;
-	
-	/*-moz-transition-delay: 1.8s;
-	-webkit-transition-delay: 1.8s;
-    transition-delay: 1.8s;*/
 }
 
 #result.draw,

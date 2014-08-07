@@ -84,12 +84,12 @@ Game.prototype.displayResult = function(result,player1sGo,player2sGo) {
 		resultHolder.innerHTML = this.calcutateResultsMessage(result,player1sGo,player2sGo);
 		setTimeout(function(){
 			resultHolder.className = "draw";
-		},1010);
+		},1300);
 	} else if (resultHolder != null) {
 		resultHolder.className = "";
 		resultHolder.innerHTML = this.calcutateResultsMessage(result,player1sGo,player2sGo);
 		setTimeout(function(){
 			resultHolder.className = (result == 1) ? "win1" : "win2";
-		},1010);
+		},1300);
 	}
 };
