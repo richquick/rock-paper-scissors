@@ -36,3 +36,13 @@ Things I'd like to do next would be:
 
 ## Hosted version
 At [http://richquick.github.io/rock-paper-scissors/](http://richquick.github.io/rock-paper-scissors/)
+
+## Specs
+
+To run specs from command line use (require Node & [Grunt installed](http://gruntjs.com/getting-started)):
+
+	grunt jasmine:all
+
+You can also see specs in the browser:
+
+[http://richquick.github.io/rock-paper-scissors/SpecRunner.html](http://richquick.github.io/rock-paper-scissors/SpecRunner.html)
