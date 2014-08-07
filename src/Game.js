@@ -79,10 +79,17 @@ Game.prototype.initialCaps = function(string) {
 
 Game.prototype.displayResult = function(result,player1sGo,player2sGo) {
 	var resultHolder = document.getElementById("result");
-	resultHolder.innerHTML = this.calcutateResultsMessage(result,player1sGo,player2sGo);
 	if (result == 0) {
-		resultHolder.className = "draw";
+		resultHolder.className = "";
+		resultHolder.innerHTML = this.calcutateResultsMessage(result,player1sGo,player2sGo);
+		setTimeout(function(){
+			resultHolder.className = "draw";
+		},1010);
 	} else if (resultHolder != null) {
-		resultHolder.className = (result == 1) ? "win1" : "win2";
+		resultHolder.className = "";
+		resultHolder.innerHTML = this.calcutateResultsMessage(result,player1sGo,player2sGo);
+		setTimeout(function(){
+			resultHolder.className = (result == 1) ? "win1" : "win2";
+		},1010);
 	}
 };
