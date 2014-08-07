@@ -75,27 +75,27 @@ describe("Game.calcutateResultsMessage", function() {
     });
 
     it("P1 Paper should beat P2 Rock", function() {
-      expect(game.calcutateResultsMessage(1,'paper','rock')).toEqual('paper beats rock - you win :)');
+      expect(game.calcutateResultsMessage(1,'paper','rock')).toEqual('Paper beats rock - you win :)');
     });
 
     it("P2 Paper should beat P1 Rock", function() {
-      expect(game.calcutateResultsMessage(2,'rock','paper')).toEqual('paper beats rock - you lose :(');
+      expect(game.calcutateResultsMessage(2,'rock','paper')).toEqual('Paper beats rock - you lose :(');
     });
 
     it("P1 Scissors should beat P2 Paper", function() {
-      expect(game.calcutateResultsMessage(1,'scissors','paper')).toEqual('scissors beats paper - you win :)');
+      expect(game.calcutateResultsMessage(1,'scissors','paper')).toEqual('Scissors beats paper - you win :)');
     });
 
     it("P2 Scissors should beat P1 Paper", function() {
-      expect(game.calcutateResultsMessage(2,'paper','scissors')).toEqual('scissors beats paper - you lose :(');
+      expect(game.calcutateResultsMessage(2,'paper','scissors')).toEqual('Scissors beats paper - you lose :(');
     });
 
     it("P1 Rock should beat P2 Scissors", function() {
-      expect(game.calcutateResultsMessage(1,'rock','scissors')).toEqual('rock beats scissors - you win :)');
+      expect(game.calcutateResultsMessage(1,'rock','scissors')).toEqual('Rock beats scissors - you win :)');
     });
 
     it("P2 Rock should beat P1 Scissors", function() {
-      expect(game.calcutateResultsMessage(2,'scissors','rock')).toEqual('rock beats scissors - you lose :(');
+      expect(game.calcutateResultsMessage(2,'scissors','rock')).toEqual('Rock beats scissors - you lose :(');
     });
 
     it("If P1 matches P2 it should be a draw", function() {
@@ -108,6 +108,28 @@ describe("Game.calcutateResultsMessage", function() {
       expect(game.calcutateResultsMessage(false,'scissors','xxx')).toEqual(resultMessageSnippets.error);
       expect(game.calcutateResultsMessage(false,'xxx','scissors')).toEqual(resultMessageSnippets.error);
       expect(game.calcutateResultsMessage(false,'xxx','xxx')).toEqual(resultMessageSnippets.error);
+    });
+  });
+
+
+
+  describe("Game.initialCaps", function() {
+    it("is a function", function() {
+      expect(typeof game.initialCaps).toEqual('function');
+    });
+
+    it("should convert the first letter of a string to a capital, if it's lower case", function() {
+      expect(game.initialCaps("string")).toEqual("String");
+    });
+
+    it("should leave the first letter of a string as a capital, if it's upper case", function() {
+      expect(game.initialCaps("String")).toEqual("String");
+    });
+
+    it("should leave the non-alphabetic character untouched", function() {
+      expect(game.initialCaps("1 String")).toEqual("1 String");
+      expect(game.initialCaps("~ String")).toEqual("~ String");
+      expect(game.initialCaps(" String")).toEqual(" String");
     });
   });
 

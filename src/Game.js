@@ -31,7 +31,7 @@ Game.prototype.displayChoices = function(player1sGo,player2sGo) {
 		player1sGoHolder.className = "";
 		setTimeout(function(){
 			player1sGoHolder.className = player1sGo;
-		},1000);
+		},1010);
 	}
 	var player2sGoHolder = document.getElementById("computersGuess");
 	if (player2sGoHolder != null) {
@@ -39,7 +39,7 @@ Game.prototype.displayChoices = function(player1sGo,player2sGo) {
 		player2sGoHolder.className = "";
 		setTimeout(function(){
 			player2sGoHolder.className = player2sGo;
-		},1000);
+		},1010);
 		
 	}
 };
@@ -69,7 +69,12 @@ Game.prototype.calcutateResultsMessage = function(result,player1sGo,player2sGo) 
 		}
 		resultsMessage += winnerText;
 	}
+	resultsMessage = this.initialCaps(resultsMessage);
 	return resultsMessage;
+};
+
+Game.prototype.initialCaps = function(string) {
+	 return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
 Game.prototype.displayResult = function(result,player1sGo,player2sGo) {
