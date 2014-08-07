@@ -32,14 +32,19 @@ Things I'd like to do next would be:
 * Use web sockets with Node or Sinatra back end to allow you to play against other people
 * Add option to play Rock, Paper, Scissors, Lizard, Spock
 * Increase test coverage on DOM-related elements of the JS
-* UI improvements (especially tidying up illustrations, and thinking about more interesting animations)
+* UI improvements, inc:
+	* Think of a way to include all content above the fold on iPhone / mobile landscape view (e.g. put nav at side)
+	* Do more work on illustrations
+	* Think about more interesting animations
+	* Do retina versions of all images, not just logo
+	* Come up with a better logo
 
 ## Hosted version
-At [http://richquick.github.io/rock-paper-scissors/](http://richquick.github.io/rock-paper-scissors/)
+There is a version of the application hosted on Github pages at [http://richquick.github.io/rock-paper-scissors/](http://richquick.github.io/rock-paper-scissors/)
 
 ## Specs
 
-To run specs from command line use (require Node & [Grunt installed](http://gruntjs.com/getting-started)):
+To run specs from command line use (requires Node & [Grunt installed](http://gruntjs.com/getting-started)):
 
 	grunt jasmine:all
 
