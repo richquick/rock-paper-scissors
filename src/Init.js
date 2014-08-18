@@ -1,5 +1,5 @@
 var global = {};
-
+	
 function Init() {
 
 	var links = [

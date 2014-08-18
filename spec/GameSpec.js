@@ -53,6 +53,13 @@ describe("Game", function() {
     });
   });
 
+  
+  describe("Game.showChoice", function() {
+    it("is a function", function() {
+      expect(typeof game.showChoice).toEqual('function');
+    });
+  });
+
   describe("Game.displayChoices", function() {
     it("is a function", function() {
       expect(typeof game.displayChoices).toEqual('function');
@@ -130,6 +137,12 @@ describe("Game.calcutateResultsMessage", function() {
       expect(game.initialCaps("1 String")).toEqual("1 String");
       expect(game.initialCaps("~ String")).toEqual("~ String");
       expect(game.initialCaps(" String")).toEqual(" String");
+    });
+  });
+
+  describe("Game.showResult", function() {
+    it("is a function", function() {
+      expect(typeof game.showResult).toEqual('function');
     });
   });
 
