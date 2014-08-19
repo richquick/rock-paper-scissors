@@ -1,11 +1,13 @@
+var global = {};
+
 (function(){
 
   // Script loader
 
-  var scriptFiles = [
-	"Game",
-	"Move",
-	"Init"
+  global.scriptFiles = [
+  	"Game",
+  	"Move",
+  	"Init"
   ]
 
   function load(script) {
@@ -13,7 +15,7 @@
     document.write('<'+'script type="text/javascript" src="' + path + script + '.js"><' + '/script>');
   }
 
-  scriptFiles.map( function(script) {
+  global.scriptFiles.map( function(script) {
   	load(script);
   });
 

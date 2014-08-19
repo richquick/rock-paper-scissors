@@ -1,22 +1,25 @@
 function Move() {
+	global.move = {
+		validMoves : [
+		  'rock',
+		  'paper',
+		  'scissors'
+		],
+		computerMove : "computer"
+	}
 }
 
 Move.prototype.generate = function() {
-	var seed = Math.floor(Math.random()*3);
-	seed = (seed > 2) ? 2 : seed;
-	var validMoves = [
-	  'rock',
-	  'paper',
-	  'scissors'
-	];
-	return (validMoves[seed]);
+	var seed = Math.floor(Math.random()*global.move.validMoves.length);
+	seed = (seed > global.move.validMoves.length - 1) ? global.move.validMoves.length - 1 : seed;
+	return (global.move.validMoves[seed]);
 };
 
 Move.prototype.choose = function(player1sGo) {
 
-	global.isComputerTurn = (player1sGo == 'computer') ? true : false;
+	global.isComputerTurn = (player1sGo == global.move.computerMove) ? true : false;
 
-	if (player1sGo == 'computer') {
+	if (player1sGo == global.move.computerMove) {
 		player1sGo = this.generate();
 	}
 

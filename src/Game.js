@@ -12,6 +12,14 @@ function Game() {
 			'paper' 	: 'rock',
 			'scissors' 	: 'paper',
 			'rock'		: 'scissors'
+		},
+		guesses : {
+			myGuess 		: "myGuess",
+			computersGuess 	: "computersGuess"
+		},
+		cssClasses : {
+			win 		: "win",
+			draw		: "draw"
 		}
 	}
 }
@@ -55,14 +63,14 @@ Game.prototype.showResult = function(result,resultID,resultClass,player1sGo,play
 
 Game.prototype.displayChoices = function(player1sGo,player2sGo) {
 	var timer = 1010;
-	this.showChoice(player1sGo,"myGuess",timer);
-	this.showChoice(player2sGo,"computersGuess",timer);
+	this.showChoice(player1sGo,global.game.guesses.myGuess,timer);
+	this.showChoice(player2sGo,global.game.guesses.computersGuess,timer);
 };
 
 Game.prototype.displayResult = function(result,player1sGo,player2sGo) {
 	var resultID = "result";
 	var timer = 1800;
-	var resultClass = (result >= 1) ? "win" + result : "draw";
+	var resultClass = (result >= 1) ? global.game.cssClasses.win + result : global.game.cssClasses.draw;
 
 	this.showResult(result,resultID,resultClass,player1sGo,player2sGo,timer);
 };
